@@ -1,3 +1,27 @@
+/*----------------------
+  1. IMPORTANT IMPORTS
+------------------------*/
+
+// ! Import Modules
+@font-face {
+  font-family: 'cocosharpbold';
+  src: url(/fontStyles/cocosharp/Coco-Sharp-Bold-trial.ttf);
+}
+
+@font-face {
+  font-family: 'tommy';
+  src: url(/fontStyles/made_tommy/tommyregular.otf);
+}
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+
+// 
 // * Scroll behavior
 html{
     scroll-behavior: smooth;
@@ -38,3 +62,21 @@ html{
     }
   }
   // * Loader: For smooth animation after loading
+/*-----------------------------------------
+  2. FORMATTING
+-------------------------------------------*/
+.landingPageTitle{
+  font-family: cocosharpbold;
+}
+
+h1,h2,h3,h4,h5{
+  font-family: cocosharpbold;
+}
+
+p, span, a{
+  font-family: tommy;
+}
+/*-----------------------------------------
+  A.1 LANDING PAGE
+-------------------------------------------*/
+
