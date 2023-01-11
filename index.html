@@ -12,7 +12,10 @@
     <!-- Bootstrap Links and Script -->
 
     <!-- Scripts -->
-    <script src="/JavaScript/loader.js"></script>
+    <script defer src="/JavaScript/loader.js"></script>
+    <script defer type = "module" src="/firebase/firebaseLogin.js"></script>
+    <script defer src="/JavaScript/validationForm.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <!-- Scripts -->
 
     <!-- Styles -->
@@ -35,7 +38,7 @@
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
               <img src="/img/icons/sea-turtle.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-              Frilled Shark & Tertel
+              <span class="landingPageTitle">Frilled Shark & Tertel</span> 
             </a>
           </div>
         </nav>
@@ -45,23 +48,36 @@
         <div class="container mt-3">
           <div class="row">
             <div class="col-sm mt-3">
-              <img src="/img/icons/undraw_japan_ubgk.svg" alt="" class="img-fluid">
+              <img src="/img/icons/green_japan.svg" alt="" class="img-fluid">
             </div>
 
             <div class="col-sm mt-3">
               <div class="card">
                 <div class="card-body">
                   <h4 class="text-center">Sign in</h4>
+                  <form class="row g-3 needs-validation" novalidate>
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon1">Email</span>
+                      <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" id="login_username">
+                      <div class="invalid-feedback">
+                        Invalid Email.
+                      </div>
+                      <div class="valid-feedback"></div>
+                    </div>
 
-                  <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">Username</span>
-                    <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
-                  </div>
+                    <div class="input-group mb-3">
+                      <span class="input-group-text" id="basic-addon1">Password</span>
+                      <input type="password" class="form-control" aria-label="Password" aria-describedby="basic-addon1" id="login_password">
+                      <div class="invalid-feedback">
+                        Invalid Password.
+                      </div>
+                      <div class="valid-feedback"></div>
+                    </div>
 
-                  <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">Password</span>
-                    <input type="password" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
-                  </div>
+                    <div class="input-group mb-3 justify-content-center">
+                      <button type="button" class="btn btn-primary" id="signInBtn">Sign in</button>
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
