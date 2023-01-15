@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
 import {getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -19,6 +20,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const database = getDatabase(app);
 // *
 
 // * IMPORT
@@ -34,6 +36,13 @@ FirebaseSignIn.checkActiveUser()
               .then((user) => {
                 console.log(user.email)
                 console.log(user.uid)
+
+                const nameRef = ref(database, 'Users/' + user.uid);
+                    onValue(nameRef, (data) => {
+                        var name = data.val().name; 
+                        
+                        document.getElementById("name").textContent= name;
+                      });
               }, function(){
                 console.log('No user Exist.');
                 window.location.href = '/';
