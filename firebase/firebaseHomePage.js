@@ -40,7 +40,6 @@ FirebaseSignIn.checkActiveUser()
                 const nameRef = ref(database, 'Users/' + user.uid);
                     onValue(nameRef, (data) => {
                         var name = data.val().name; 
-                        
                         document.getElementById("name").textContent= name;
                       });
               }, function(){
