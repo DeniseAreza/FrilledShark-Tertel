@@ -12,8 +12,8 @@
     <!-- Bootstrap Links and Script -->
 
     <!-- Scripts -->
-    <script src="/JavaScript/loader.js"></script>
-    <script defer type="module" src="/firebase/firebaseAlbum.js"></script>
+    <script defer src="/JavaScript/loader.js"></script>
+    <script defer type="module" src="/firebase/firebasePostLetter.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <!-- Scripts -->
 
@@ -32,10 +32,10 @@
 
       <!-- Whole Container of the Content -->
       <div style="display:none;" id="allContent" class="animate">
-          <!-- Navbar -->
-          <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="/HTML/homepage.html">
                 <img src="/img/icons/sea-turtle.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                 <span class="landingPageTitle">Frilled Shark & Tertel</span> 
               </a>
@@ -48,11 +48,11 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggleactive" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Post
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="/HTML/postLetter.html">Post a Letter</a></li>
+                      <li><a class="dropdown-item active" href="/HTML/postLetter.html">Post a Letter</a></li>
                       <li><a class="dropdown-item" href="/HTML/postMedia.html">Post Photo</a></li>
                     </ul>
                   </li>
@@ -62,7 +62,7 @@
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/HTML/album.html">Jar of Memories</a>
+                    <a class="nav-link" aria-current="page" href="/HTML/album.html">Jar of Memories</a>
                   </li>
                 </ul>
                 
@@ -71,13 +71,35 @@
             </div>
         </nav>
         <!-- Navbar -->
-
         <!-- Containers -->
-        <div class="container mt-3">
-          <div id="table_media">
-            <!-- Content of Jar of Memories -->
-          </div>
-          <!-- End -->
+        <div class="container mt-3 mb-2">
+            <h4 class="text-center">Create Letter</h4>
+            <!-- Content -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="m-3">
+                        <label for="letterTitle" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="letterTitle">
+                    </div>
+
+                    <div class="m-3">
+                        <label for="letterBody" class="form-label">Body of letter</label>
+                        <div class="form-floating">
+                            <textarea class="form-control" id="letterBody" style="height: 100px"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="m-3 text-center">
+                      <button type="button" class="btn btn-primary" id="postLetter">Post</button>
+                    </div>
+
+                    <div class="m-3 text-center">
+                        <small class="text-muted">Please wait for the alert to pop-up.</small>
+                    </div>
+                </div>
+            </div>            
+            <!-- Content -->
+        <!-- End -->
         </div>
         <!-- Containers -->
       </div>
