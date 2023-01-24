@@ -13,6 +13,8 @@
 
     <!-- Scripts -->
     <script src="/JavaScript/loader.js"></script>
+    <script defer type="module" src="/firebase/firebaseAlbum.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <!-- Scripts -->
 
     <!-- Styles -->
@@ -60,7 +62,7 @@
                   </li>
 
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Jar of Memories</a>
+                    <a class="nav-link active" aria-current="page" href="/HTML/album.html">Jar of Memories</a>
                   </li>
                 </ul>
                 
@@ -72,25 +74,8 @@
 
         <!-- Containers -->
         <div class="container mt-3">
-          <!-- Card container -->
-          <div class="card mt-3">
-            <!-- Content -->
-            <div class="card-body">
-              <div class="row">
-                <div class="col-sm mt-3">
-                  <img src="/img/2022/cetteup-d3ci37Gcgxg-unsplash.jpg" alt="" class="img-fluid">
-                </div>
-    
-                <div class="col-sm mt-3">
-                  <h1>Title</h1>
-                  <small class="text-muted">January 1, 2023</small>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi provident quasi consectetur, fuga numquam nulla magni adipisci odit tempora id possimus assumenda aut deserunt dicta. Error ipsam sunt quae quo!</p>
-                  <figcaption class="blockquote-footer">
-                    Denise
-                  </figcaption>
-                </div>
-              </div>
-            </div>
+          <div id="table_media">
+            <!-- Content of Jar of Memories -->
           </div>
           <!-- End -->
         </div>
