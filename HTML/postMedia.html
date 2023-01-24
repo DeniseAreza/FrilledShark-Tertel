@@ -13,7 +13,7 @@
 
     <!-- Scripts -->
     <script defer src="/JavaScript/loader.js"></script>
-    <script defer type="module" src="/firebase/firebaseHomePage.js"></script>
+    <script defer type="module" src="/firebase/firebasePostMedia.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <!-- Scripts -->
 
@@ -76,21 +76,36 @@
             <h4 class="text-center">Post Media</h4>
             <!-- Content -->
             <div class="card">
-                <div class="m-3">
-                    <label for="mediaTitle" class="form-label">Title</label>
-                    <input type="text" class="form-control" id="mediaTitle">
-                </div>
-
-                <div class="m-3">
-                    <label for="mediaDescription" class="form-label">Description</label>
-                    <div class="form-floating">
-                        <textarea class="form-control" id="mediaDescription" style="height: 100px"></textarea>
-                    </div>
-                </div>
-
                 <div class="card-body">
+                    <div class="m-3">
+                        <label for="mediaTitle" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="mediaTitle">
+                    </div>
+
+                    <div class="m-3">
+                        <label for="mediaDescription" class="form-label">Description</label>
+                        <div class="form-floating">
+                            <textarea class="form-control" id="mediaDescription" style="height: 100px"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="m-3">
+                      <label for="datepicker" class="form-label">Date</label>
+                        <div class="form-floating">
+                            <input type="date" id="datepicker" style="width: 50%;" class="text-center">
+                        </div>
+                    </div>
                     <div class="input-group mb-3">
                         <input type="file" class="form-control" id="mediaFile">
+                    </div>
+
+                    <div class="m-3 text-center">
+                      <button type="button" class="btn btn-primary" id="postMedia">Post</button>
+                    </div>
+
+                    <div class="m-3 text-center">
+                      <progress class="progress-bar" style="width: 100%;" value="0" max="100" id="progress">0%</progress>
+                      <small class="text-muted">Please wait for the alert to pop-up.</small>
                     </div>
                 </div>
             </div>            
