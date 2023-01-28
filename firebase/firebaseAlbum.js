@@ -59,6 +59,7 @@ onChildAdded(mediaRef, (data) => {
     var mediaTitle = data.val().title;
     var mediaDescription = data.val().description;
     var mediaPicture = data.val().picture;
+    var mediaName = data.val().name;
     var mediaDateRaw = data.val().date;
 
     const date = new Date(mediaDateRaw);
@@ -75,6 +76,9 @@ onChildAdded(mediaRef, (data) => {
         + '<h1>'+ mediaTitle +'</h1>'
         + '<small class="text-muted">'+ newDate +'</small>'
         + '<p>'+ mediaDescription +'</p>'
+        + '<figcaption class="blockquote-footer">'
+        +  mediaName
+        + '</figcaption>'
         + '</div>'
         + '</div>'
         + '</div>'

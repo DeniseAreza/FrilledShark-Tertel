@@ -37,6 +37,7 @@ var mediaTitle = document.getElementById('mediaTitle');
 var mediaDescription = document.getElementById('mediaDescription');
 var datepicker = document.getElementById('datepicker');
 var mediaFile = document.getElementById('mediaFile');
+var mediaName = document.getElementById('mediaName');
 
 mediaFile.onchange = e => {
     files = e.target.files;
@@ -123,7 +124,8 @@ function postClicked() {
                         title: mediaTitle.value,
                         description: mediaDescription.value,
                         date: datepicker.value,
-                        picture : downloadURL
+                        picture : downloadURL,
+                        name : mediaName.value
                     });
                 });
             }
